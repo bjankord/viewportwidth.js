@@ -1,4 +1,4 @@
-/*! Accurate Viewport Dimensions | Author: Brett Jankord, 2013 | License: MIT */
+/*! Accurate Viewport Dimensions | Author: Brett Jankord, 2012 | License: MIT */
 /* https://github.com/bjankord/Accurate-Viewport */
 ﻿
 var getViewport = function(){
