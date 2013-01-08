@@ -14,7 +14,7 @@ Chrome and Safari report `window.innerWidth = 767` and `document.documentElement
 
 Firefox, Opera, IE report `window.innerWidth = 750` and `document.documentElement.clientWidth = 733` 
 
-That means you cannot not solely use `window.innerWidth` or `document.documentElement.clientWidth` or even `$(window).width` and expect it to be in sync with the value your media queries are responding to.
+That means you cannot not solely use `window.innerWidth` or `document.documentElement.clientWidth` or even `$(window).width();` and expect it to be in sync with the value your media queries are responding to.
 If you want to sync javascript interactions with your media query breakpoints, this is one possible solution.
 
 This is not an issue if there is no scroll bar on the page, so it is easy for devs to miss this issue. 
