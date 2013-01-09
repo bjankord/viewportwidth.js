@@ -1,5 +1,5 @@
-/*! Accurate Viewport Dimensions | Author: Brett Jankord, 2012 | License: MIT */
-/* https://github.com/bjankord/Accurate-Viewport */
+/*! getViewport.js | Author: Brett Jankord, 2012 | License: MIT */
+/* https://github.com/bjankord/getViewport.js */
 ﻿
 var getViewport = function(){
 
