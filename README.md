@@ -30,6 +30,26 @@ To get the viewport height
     
     var vpw = getViewport().height;
 
+## Support
+getViewport.js has been tested and works in/on:
+
+* Chrome
+* Safari
+* Firefox
+* IE9+
+* iPad - Safari
+* iPad - Chrome
+* Android 4.0 - Stock Browser 
+* Android - Chrome
+* Android - Firefox
+
+### Need to test
+* IE8 and lower
+* Windows Phones
+* Opera Mobile
+* Blackberry Mobiles
+
+
 ## Notes
 Based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [expriemnt](https://gist.github.com/2051999) with getting the visible viewport dimensions
 Finally decided to move this to an actual repo.
