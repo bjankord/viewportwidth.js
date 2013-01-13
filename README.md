@@ -54,4 +54,5 @@ getViewport.js has been tested and works in/on:
 Based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [expriemnt](https://gist.github.com/2051999) with getting the visible viewport dimensions
 Finally decided to move this to an actual repo.
 
-[jsperf test](http://jsperf.com/viewport-dimensions)
+[jsperf test 1](http://jsperf.com/viewport-dimensions)
+[jsperf test 2](http://jsperf.com/viewport-width-check)
