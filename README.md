@@ -1,9 +1,13 @@
 Viewportwidth.js
 =======================
 
-A solution to report accurate cross-browser viewport dimensions
+A solution for determining accurate cross-browser viewport widths.
+
+[View Demo](http://www.brettjankord.com/projects/viewportwidth/demo/)
 
 ## Why do I need this?
+Sometimes you want to sync JavaScript functionality with your CSS media query breakpoints.
+
 Webkit handles media query widths/heights differntly than most other browsers.
 
 In both Chrome and Safari, `window.innerWidth` and `document.documentElement.clientWidth` report different values if there is a scroll bar present on the page.
@@ -22,21 +26,17 @@ This is not an issue if there is no scroll bar on the page, so it is easy for de
 You can [read more about the issue here](http://www.456bereastreet.com/archive/201101/media_queries_viewport_width_scrollbars_and_webkit_browsers/ )
 
 ## Sample usage
-To get the viewport width
     
-    var vpw = getViewport().width;
-    
-To get the viewport height
-    
-    var vpw = getViewport().height;
+    var vpw = getViewportWidth();
 
 ## Support
-getViewport.js has been tested and works in/on:
+viewportwidth.js has been tested and works in:
 
 * Chrome
 * Safari
 * Firefox
-* IE9+
+* Opera
+* IE6+
 * iPad - Safari
 * iPad - Chrome
 * Android 4.0 - Stock Browser 
@@ -44,19 +44,21 @@ getViewport.js has been tested and works in/on:
 * Android - Firefox
 
 ### Need to test
-* IE8 and lower
+* iOS pre 5.0
 * Windows Phones
 * Opera Mobile
 * Blackberry Mobiles
 
 
 ## Notes
-Based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [expriemnt](https://gist.github.com/2051999) with getting the visible viewport dimensions
+This project is based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [expriemnt](https://gist.github.com/2051999) with getting the visible viewport dimensions
 Finally decided to move this to an actual repo.
 
-If you just want to check viewport width, getViewport.js is fast, compared to other ways I've tested to check the viewport width.
+Viewportwidth.js is fast, compared to other ways I've tested to check the viewport width.
 
 [jsperf test 1](http://jsperf.com/viewport-width-check)
 
 [jsperf test 2](http://jsperf.com/viewport-dimensions)
+
+If you have any suggestions to improve this project are come across any bugs, please open up an issue ticket. Thanks!
 
