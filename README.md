@@ -1,4 +1,4 @@
-getViewport.js
+Viewportwidth.js
 =======================
 
 A solution to report accurate cross-browser viewport dimensions
