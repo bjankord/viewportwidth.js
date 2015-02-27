@@ -1,5 +1,5 @@
 {
-  "name": "viewportwidth.js",
+  "name": "viewportwidth",
   "description": "A solution for determining accurate cross-browser viewport widths",
   "author": "Brett Jankord",
   "main": "viewportwidth.js",
