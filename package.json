@@ -1,10 +1,10 @@
 {
-  name: "viewportwidth.js",
-  description: "A solution for determining accurate cross-browser viewport widths",
-  author: "Brett Jankord",
-  main: "viewportwidth.js",
-  version: "1.0.0",
-  bugs: "https://github.com/bjankord/viewportwidth.js/issues",
-  license: "MIT",
-  homepage: "http://brettjankord.com/projects/viewportwidth/demo/"
+  "name": "viewportwidth.js",
+  "description": "A solution for determining accurate cross-browser viewport widths",
+  "author": "Brett Jankord",
+  "main": "viewportwidth.js",
+  "version": "1.0.0",
+  "bugs": "https://github.com/bjankord/viewportwidth.js/issues",
+  "license": "MIT",
+  "homepage": "http://brettjankord.com/projects/viewportwidth/demo/"
 }
