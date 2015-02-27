@@ -1,5 +1,3 @@
-/*! viewportwidth.js 0.1.2 | Author: Brett Jankord, 2012 | License: MIT */
-/* https://github.com/bjankord/viewportwidth.js */
 module.exports = function() {
   "use strict";
   var isWebKit = 'WebkitAppearance' in document.documentElement.style;
