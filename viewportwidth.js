@@ -1,18 +1,12 @@
-/*! viewportwidth.js 0.1.1 | Author: Brett Jankord, 2012 | License: MIT */
-/* https://github.com/bjankord/viewportwidth.js */
-var getViewportWidth = function(){
+module.exports = function() {
+  "use strict";
+  var isWebKit = 'WebkitAppearance' in document.documentElement.style;
+  var isOldIE = !(typeof (window.innerWidth) == 'number'); // IE 6-8
 
-  var vpw, w = window, webkit = (!(window.webkitConvertPointFromNodeToPage == null));
-
-  // Webkit and IE 6-8
-   if (webkit || !(typeof (window.innerWidth) == 'number')) {
-    vpw = document.documentElement.clientWidth;
-  } 
-  // Everything else
-  else {
-    vpw =  w.innerWidth;
+  if (isWebKit || isOldIE) {
+    return document.documentElement.clientWidth;
   }
 
-  return vpw;
-
+  // Everything else
+  return window.innerWidth;
 };

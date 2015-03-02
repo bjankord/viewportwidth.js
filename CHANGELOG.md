@@ -1,4 +1,10 @@
-## 0.1.1 (5 Februrary 2013)
+## 1.0.0 (2015-02-27)
+
+- [new] NPM module
+- [new] CommonJS module
+- Refactor
+
+## 0.1.1 (2013-02-13)
 
 Features:
 

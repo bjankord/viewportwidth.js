@@ -1,5 +1,5 @@
 Viewportwidth.js
-=======================
+================
 
 A solution for determining accurate cross-browser viewport widths.
 
@@ -23,11 +23,16 @@ If you want to sync javascript interactions with your media query breakpoints, t
 
 This is not an issue if there is no scroll bar on the page, so it is easy for devs to miss this issue. 
 
-You can [read more about the issue here](http://www.456bereastreet.com/archive/201101/media_queries_viewport_width_scrollbars_and_webkit_browsers/ )
+You can [read more about the issue here](http://www.456bereastreet.com/archive/201101/media_queries_viewport_width_scrollbars_and_webkit_browsers/)
 
 ## Sample usage
-    
-    var vpw = getViewportWidth();
+
+Install using [npm](https://www.npmjs.com/): `npm install viewportwidth --save`
+
+```js
+    var viewportwidth = require('viewportwidth');
+    window.addEventListener('resize', function() { console.log(viewportwidth()); });
+```
 
 ## Support
 viewportwidth.js has been tested and works in:
@@ -51,7 +56,7 @@ viewportwidth.js has been tested and works in:
 
 
 ## Notes
-This project is based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [expriemnt](https://gist.github.com/2051999) with getting the visible viewport dimensions
+This project is based on a [gist](https://gist.github.com/2399828) I wrote back in April 2012 which was inspired by the Scott Jehl's [experiment](https://gist.github.com/2051999) with getting the visible viewport dimensions
 Finally decided to move this to an actual repo.
 
 Viewportwidth.js is fast, compared to other ways I've tested to check the viewport width.
