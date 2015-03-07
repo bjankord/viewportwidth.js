@@ -3,7 +3,7 @@ Viewportwidth.js
 
 A solution for determining accurate cross-browser viewport widths.
 
-[View Demo](http://www.brettjankord.com/projects/viewportwidth/demo/)
+[View Demo](https://bjankord.github.io/viewportwidth.js/)
 
 ## Why do I need this?
 Sometimes you want to sync JavaScript functionality with your CSS media query breakpoints.
