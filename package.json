@@ -3,7 +3,7 @@
   "description": "A solution for determining accurate cross-browser viewport widths",
   "author": "Brett Jankord",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "bugs": "https://github.com/bjankord/viewportwidth.js/issues",
   "license": "MIT",
   "homepage": "http://brettjankord.com/projects/viewportwidth/demo/"
