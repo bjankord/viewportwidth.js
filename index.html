@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Viewportwidth.js</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<style>
+html {
+  font: 100%/1.5 Helvetica, sans-serif;
+  overflow-y: scroll;
+}
+
+body {
+  padding:0;
+  margin:0;
+  word-wrap: break-word;
+}
+
+.header {
+  background-color: #333;
+  background-image: url('sky-min.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.shape-display {
+  display: block;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 280px;
+  width: 280px;
+  height: 280px;
+  color: #fff;
+  border-radius: 500px;
+  text-align: center;
+}
+
+.shape {
+  background: #832333;
+  background: rgba(131,35,51,0.6);
+}
+
+@media screen and (min-width: 480px) {
+  .shape {
+    background: #81409f;
+    background: rgba(129,64,159,0.6);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .shape {
+    background: #894b08;
+    background: rgba(137,75,8,0.6);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shape {
+    background: #12779c;
+    background: rgba(18,119,156,0.6);
+  }
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4 {
+  font-weight: bold;
+}
+
+.color-1 {
+  color: #832333;
+}
+
+.color-2 {
+  color: #81409f;
+}
+
+.color-3 {
+  color: #894b08;
+}
+
+.color-4 {
+  color: #12779c;
+}
+
+.content {
+  max-width: 600px;
+  padding: 40px 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  font-weight: 700;
+  font-size: 110%;
+  font-style: italic;
+}
+
+.ghlink {
+    margin:2em 0 2.5em;
+    text-align: center;
+}
+
+.ghlink a {
+    text-decoration: none;
+    color: #222;
+    padding: .5em;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+.ghlink a:hover,
+.ghlink a:focus {
+    border-color: #333;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="shape shape-display">viewportwidth.js</h1>
+  </div>
+  <div class="main">
+    <div class="content">
+      <p class="intro">A small JavaScipt utility to accurately report the viewport width.</p>
+
+      <h2>Results</h2>
+      <div><p><span id="vpw"></span></p></div>
+      <div><p><span id="innerWidth"></span></p></div>
+      <div><p><span id="clientWidth"></span></p></div>
+      <div><p><span id="jQueryWidth"></span></p></div>
+
+      <h2>Notes</h2>
+      <p>The shape above will change colors at the following media query breakpoints:<br>
+      <b>480, 640, 1024</b>.</p>
+      <p>The shape will be <span class="color-1">maroon</span> from <b>0px</b> to <b>479px</b>.</p>
+      <p>At <b>480px</b>, the shape changes to <span class="color-2">purple</span>.</p>
+      <p>At <b>640px</b>, the shape changes to <span class="color-3">orange</span>.</p>
+      <p>At <b>1024px</b> and up, the shape changes to <span class="color-4">blue</span>.</p>
+
+      <h2>Styles</h2>
+      <script src="https://gist.github.com/bjankord/65d99ce36f28199111ec.js"></script>
+
+      <p class="ghlink"><a href="https://github.com/bjankord/viewportwidth.js">View Project On Github</a></p>
+      <iframe src="https://ghbtns.com/github-btn.html?user=bjankord&repo=viewportwidth.js&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=bjankord&repo=viewportwidth.js&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=bjankord&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="viewportwidth.js"></script>
+  <script>
+  $(function(){
+
+    var displayWidths = (function () {
+
+      var mod = {
+
+        getViewportWidth: function () {
+          var vpw = viewportwidth();
+          $('#vpw').html("viewportwidth.js = <strong>" + vpw + "</strong>");
+        },
+
+        getInnerWidth: function () {
+          $('#innerWidth').html("window.innerWidth = <strong>" + window.innerWidth + "</strong>");
+        },
+
+        getClientWidth: function () {
+          $('#clientWidth').html("document.documentElement.clientWidthw = <strong>" + document.documentElement.clientWidth + "</strong>");
+        },
+
+        getJQueryWidth: function () {
+          $('#jQueryWidth').html("$(window).width(); = <strong>" + $(window).width() + "</strong>");
+        }
+
+      };
+
+      return mod;
+
+    })();
+
+    // Usage:
+    displayWidths.getViewportWidth();
+    displayWidths.getInnerWidth();
+    displayWidths.getClientWidth();
+    displayWidths.getJQueryWidth();
+
+    $(window).resize(function(){
+      displayWidths.getViewportWidth();
+      displayWidths.getInnerWidth();
+      displayWidths.getClientWidth();
+      displayWidths.getJQueryWidth();
+    });
+  });
+  </script>
+</body>
+</html>
