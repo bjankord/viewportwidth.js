@@ -1,4 +1,4 @@
-var viewportwidth = function() {
+module.exports = function() {
   "use strict";
   var isOldIE = !(typeof (window.innerWidth) == 'number'); // IE 6-8
 
